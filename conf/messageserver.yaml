@@ -1,0 +1,21 @@
+server:
+  host: "127.0.0.1"
+  port: 8081
+  serverName: "unknown"
+  mode: "dev"
+  nodeId: 1
+
+logger:
+  level: "DEBUG"
+  filePath: "./log_file"
+  fileName: "log.log"
+  maxFileSize: 1073741824
+  toFile: false
+  formatter: text
+  caller: true
+
+mongo:
+  url: "mongodb://ip:27017"
+  db: "chatMessages"
+  maxPoolSize: 20
+  minPoolSize: 10

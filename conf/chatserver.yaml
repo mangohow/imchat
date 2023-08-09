@@ -1,0 +1,33 @@
+server:
+  host: "127.0.0.1"
+  port: 6387
+  name: "unknown"
+  mode: "dev"
+
+redis:
+  addr: "ip:6379"
+  poolSize: 10
+  minIdleConns: 5
+  password: ""
+  db: 0
+
+rabbitmq:
+  host: "ip"
+  port: 5672
+  username: guest
+  password: guest
+
+logger:
+  level: "ERROR"
+  filePath: "./log_file"
+  fileName: "log.log"
+  maxFileSize: 1073741824
+  toFile: false
+  formatter: text
+  caller: true
+
+mongo:
+  url: "mongodb://ip:27017"
+  db: "chatMessages"
+  maxPoolSize: 20
+  minPoolSize: 10

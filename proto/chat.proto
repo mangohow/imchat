@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package pb;
+option go_package = "./pb";
+
+enum MsgType {
+    Text = 0;
+    Image = 1;
+    File = 2;
+}
+
+// 单聊消息
+message SingleChat {
+  int64 messageSeq = 1;    // 消息序列，发送端无需填入
+  string messageId = 2;     // 消息id，由服务器生成
+  int64 createTime = 3;   // 创建时间，由服务器填入
+  int64 sender = 4;       // 发送者ID
+  int64 receiver = 5;     // 接收者ID
+  MsgType msgType = 6;     // 消息类型
+  bytes message = 7;      // 消息内容
+}
+
+// 消息确认
+message ChatAck {
+  int64 messageSeq = 1;
+  string messageId = 2;
+}
+
+message GroupChat {
+  int64 msgSeq = 1;        // 消息序列号
+  string sender = 2;       // 发送者ID
+  string group = 3;     // 接收者ID
+  MsgType msgType = 4;     // 消息类型
+  bytes message = 5;      // 消息内容
+  int64 createTime = 6;    // 创建时间
+}
+
+message Hello {
+  string message = 1;
+}

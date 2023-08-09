@@ -1,0 +1,27 @@
+server:
+  host: "127.0.0.1"
+  port: 8080
+  serverName: "unknown"
+  mode: "dev"
+  nodeId: 1
+
+mysql:
+  dataSourceName: "root:passwd@tcp(ip:3306)/imdb?charset=utf8mb4&parseTime=true&loc=Local"
+  maxOpenConns: 20
+  maxIdleConns: 10
+
+redis:
+  addr: "ip:6379"
+  poolSize: 10
+  minIdleConns: 5
+  password: ""
+  db: 0
+
+logger:
+  level: "DEBUG"
+  filePath: "./log_file"
+  fileName: "log.log"
+  maxFileSize: 1073741824
+  toFile: false
+  formatter: text
+  caller: true
