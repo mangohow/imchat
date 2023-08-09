@@ -2,6 +2,7 @@
 
 ## build 
 make build WHAT=$servername
+
 例如:  make build WHAT=chatserver
 
 
